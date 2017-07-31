@@ -1,0 +1,47 @@
+.container {
+  min-width: 1170px;
+  //   min-height: 800px;
+  width: 100%;
+  background-color: white;
+}
+
+.main-part {
+  // background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  //   width: 1170px;
+  //   height: 700px;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  min-height: 603px;
+  text-align: center;
+  // opacity: 0;
+  // transition: all 2s ease-in-out;
+}
+
+.login-button:hover {
+  font-weight: 400;
+  background-color: #447db7;
+}
+
+.slider-buttons-container {
+  text-align: center;
+  margin-top: 19%;
+}
+
+.slider-buttons-item {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+// .slider-buttons-item-active {
+//     border: none;
+//     background-color: #fff;
+//     border: 2px solid #fff;
+// }
