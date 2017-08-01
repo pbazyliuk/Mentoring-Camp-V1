@@ -1,0 +1,46 @@
+.navigation-container {
+	width: 270px;
+	background-color: #447db7;
+	height: 603px;
+}
+
+.navigation {
+	margin: 0;
+	padding: 42px 0;
+}
+
+.navigation-item {
+	list-style: none;
+	padding: 11px 20px 11px 60px;
+	font-size: 2.1rem;
+	font-weight: 300;
+	background-color: #1164b8;
+	margin-bottom: 2px;
+	background-repeat: no-repeat;
+	background-position: 22px 8px;
+	cursor: pointer;
+}
+
+.navigation-item:hover {
+	background-color: #73136e;
+}
+
+.navigation-item:nth-child(1) {
+	background-image: url('../../../images/study-plan.png');
+}
+
+.navigation-item:nth-child(2) {
+	background-image: url('../../../images/users.png');
+}
+
+.navigation-item:nth-child(3) {
+	background-image: url('../../../images/history.png');
+}
+
+.navigation-item:nth-child(4) {
+	background-image: url('../../../images/bar-chart.png');
+}
+
+.navigation-item:nth-child(5) {
+	background-image: url('../../../images/open-book.png');
+}

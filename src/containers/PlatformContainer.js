@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Header from '../components/Header/Header';
+import ContentContainer from './ContentContainer';
+import styles from './MainContainer.scss';
 
 class PlatformContainer extends React.Component {
 	constructor(props) {
@@ -9,8 +11,9 @@ class PlatformContainer extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className={styles['container']}>
 				<Header />
+				<ContentContainer />
 			</div>
 		);
 	}

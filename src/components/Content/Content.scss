@@ -1,0 +1,46 @@
+.content-container {
+    background-color: #efefef;
+    width: 614px;
+    min-height: 551px;
+    max-height: 603px;
+    padding: 24px; // display: flex;
+    box-sizing: border-box; // justify-content: center; // align-content: space-around;
+    // flex-direction: column;
+    overflow-y: scroll;
+}
+
+.content-header-container {
+    width: 100%;
+    display: flex; // margin-top: 42px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.content-header {
+    padding: 10px;
+    font-weight: 500; // width: 200px;
+    color: #929292;
+    background-color: #efefef;
+    font-size: 2.1rem; // position: relative;
+    // z-index: 1;
+}
+
+.search-field-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.search-field {
+    width: 552px;
+    height: 42px;
+    padding: 0 21px;
+    box-sizing: border-box;
+}
+
+.content-header-image {
+    margin-top: 24px;
+    height: 26px;
+    width: 26px;
+    background-image: url('../../../images/theory.png');
+    background-repeat: no-repeat; // background-position: 10px 42px;
+}
