@@ -40,16 +40,14 @@ class Main extends React.Component {
   }
 
   componentDidMount(props) {
-    console.log(this.props.auth.get("authenticated"));
-    setTimeout(this.switchSliderImg, 4000);
+    this.timer = setInterval(this.switchSliderImg, 4000);
   }
 
-  // componentUnMount() {
-  //   clearTimeout(this.timer);
-  // }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
 
   switchSliderImg(e) {
-    console.log(this.props.auth.get("authenticated"));
     let itemNumber;
     if (e) {
       this.setState({
