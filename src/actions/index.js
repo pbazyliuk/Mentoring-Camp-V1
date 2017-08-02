@@ -1,10 +1,8 @@
+import { AUTH_USER_SOCIAL } from '../actionsTypes/index.js';
 
-
-import * as actionsTypes from '../actionsTypes/index.js';
-
-export const defaultAction = (val) => {
+export function authUserSocial(userData) {
 	return {
-		type: actionsTypes.DEFAULT_ACTION,
-		val
-	}
+		type: AUTH_USER_SOCIAL,
+		payload: userData
+	};
 }

@@ -1,3 +1,1 @@
-
-
-export const DEFAULT_ACTION = 'DEFAULT_ACTION';
+export const AUTH_USER_SOCIAL = 'AUTH_USER_SOCIAL';

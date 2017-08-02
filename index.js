@@ -3,23 +3,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
 
-import defaultReducer from './src/reducers/';
-import { reducer as formReducer } from 'redux-form';
+import rootReducer from './src/reducers/';
 
-// Components
 import AppContainer from './src/containers/AppContainer';
 
-// CSS
 import './style.scss';
 
-const rootReducer = combineReducers({
-	default: defaultReducer,
-	form: formReducer
-});
-
-const store = createStore(rootReducer);
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(rootReducer);
 
 ReactDOM.render(
 	<Provider store={store}>

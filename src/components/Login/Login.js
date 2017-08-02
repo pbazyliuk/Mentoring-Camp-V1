@@ -1,5 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
+import { auth, database, googleAuthProvider } from '../../utils/firebase';
+
 import styles from './Login.scss';
 
 function validate(values) {
@@ -63,6 +67,15 @@ class Login extends React.Component {
 		super(props);
 	}
 
+	componentDidMount() {
+		auth.onAuthStateChanged(currentUser => {
+			if (currentUser !== null) {
+				console.error(this.props);
+				this.props.authUserSocial(currentUser);
+			}
+		});
+	}
+
 	render() {
 		const { handleSubmit, valid } = this.props;
 		console.error(valid);
@@ -109,13 +122,13 @@ class Login extends React.Component {
 							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAxJREFUeNpjYBjcAAAAoAABjvuxtAAAAABJRU5ErkJggg=="
 						/>
 						<img
+							onClick={() => auth.signInWithPopup(googleAuthProvider)}
 							className={styles['google-plus-logo-on-black-background']}
 							alt=""
 							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAxJREFUeNpjYBjcAAAAoAABjvuxtAAAAABJRU5ErkJggg=="
 						/>
 					</div>
 
-					
 					<button
 						type="submit"
 						disabled={!valid}
@@ -134,4 +147,4 @@ Login = reduxForm({
 	validate
 })(Login);
 
-export default Login;
+export default connect(null, actions)(Login);

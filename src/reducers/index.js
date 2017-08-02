@@ -1,11 +1,10 @@
-import * as actionsTypes from '../actionsTypes/index.js';
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import authReducer from './auth';
 
-export default function DefaultReducer(state={}, action) {
-	switch (action.type) {
-		case actionsTypes.DEFAULT_ACTION:
-			return Object.assign({}, { isShown: action.val });
+const rootReducer = combineReducers({
+	form: formReducer,
+	auth: authReducer
+});
 
-		default:
-			return state;
-	}
-}
+export default rootReducer;
