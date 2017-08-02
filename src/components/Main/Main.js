@@ -28,6 +28,8 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
+    this.timer = "";
+
     this.state = {
       itemNumber: 1,
       sliderBtnActiveStyle: sliderBtnActiveStyle,
@@ -37,11 +39,17 @@ class Main extends React.Component {
     this.switchSliderImg = this.switchSliderImg.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount(props) {
+    console.log(this.props.auth.get("authenticated"));
     setTimeout(this.switchSliderImg, 4000);
   }
 
+  // componentUnMount() {
+  //   clearTimeout(this.timer);
+  // }
+
   switchSliderImg(e) {
+    console.log(this.props.auth.get("authenticated"));
     let itemNumber;
     if (e) {
       this.setState({
@@ -74,14 +82,14 @@ class Main extends React.Component {
         this.setState({ imgSource: imgOne });
         break;
     }
-    if (!e) setTimeout(this.switchSliderImg, 4000);
+    // if (!e)
+    //   setTimeout(this.switchSliderImg, 4000);
   }
 
   render() {
     return (
       <main style={this.state.imgSource} className={styles["main-part"]}>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={LoginContainer} />
+        <Home />
 
         <div
           onClick={this.switchSliderImg}
