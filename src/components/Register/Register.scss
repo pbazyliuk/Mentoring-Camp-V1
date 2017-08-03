@@ -1,0 +1,145 @@
+.login-form-container {
+    width: 1170px;
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+}
+
+.login-form {
+    width: 370px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.login-form-name {
+    background-color: #73136e;
+    width: 320px;
+    padding: 11px 0;
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-form-label {
+    color: #000;
+    display: block;
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+.login-form-input {
+    width: 318px;
+    height: 29px;
+    margin-bottom: 20px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.social-icons-container {
+    margin-bottom: 20px;
+    height: 32px;
+}
+
+.social-icons-item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 35px;
+    background-color: #73136e;
+}
+
+.social-icons-item:last-child {
+    margin-right: 0;
+}
+
+.login-form-button {
+    background-color: #1164b8;
+    border: none;
+    width: 320px;
+    padding: 11px 0;
+    color: #fff;
+    padding: 9px 0;
+    font-size: 1.9rem;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.login-form-button:disabled {
+    background-color: grey;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.facebook,
+.github-logo,
+.google-plus-logo-on-black-background {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url('../../../images/social-icon-sprite.png');
+    cursor: pointer;
+}
+
+.facebook {
+    background-position: 0 0%;
+    background-size: 100%;
+    margin-right: 32px;
+}
+
+.github-logo {
+    background-position: 0 50%;
+    background-size: 100%;
+    margin-right: 32px;
+}
+
+.google-plus-logo-on-black-background {
+    background-position: 0 100%;
+    background-size: 100%;
+}
+
+.error {
+    color: red;
+    text-align: left;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 17px;
+}
+
+.errorBorder {
+    border: 2px solid red;
+}
+
+.input-container {
+    position: relative;
+}
+
+button:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1.3rem;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1.3rem;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 1.3rem;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 1.3rem;
+}

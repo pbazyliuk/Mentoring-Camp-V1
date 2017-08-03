@@ -15,6 +15,12 @@ class Home extends React.Component {
 						Login
 					</button>
 				</Link>
+
+				<Link to="/register">
+					<button className={styles['register-button']} type="button">
+						Register
+					</button>
+				</Link>
 			</div>
 		);
 	}
