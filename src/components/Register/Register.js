@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import firebase from 'firebase';
 import * as actions from '../../actions/index';
 import { auth, database, googleAuthProvider } from '../../utils/firebase';
 
