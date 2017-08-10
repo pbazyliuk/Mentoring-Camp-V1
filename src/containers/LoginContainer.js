@@ -19,7 +19,7 @@ class LoginContainer extends React.Component {
 			.auth()
 
 			.signInWithEmailAndPassword(e.email, e.password)
-			.then(function(user) {
+			.then((user)=> {
 				console.log('signin', user);
 				this.props.authUserSocial(user);
 			})

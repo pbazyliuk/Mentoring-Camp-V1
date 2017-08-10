@@ -6,8 +6,10 @@ export default function(
   state = Map({ user: null, authenticated: false, error: "" }),
   action
 ) {
+  console.log(action)
   switch (action.type) {
     case AUTH_USER_SOCIAL: {
+      console.log("reducer auth", action)
       return state.merge({
         authenticated: true,
         user: Map(action.payload),
